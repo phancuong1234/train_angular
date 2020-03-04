@@ -1,0 +1,21 @@
+<!-- Easy and useful color picker -->
+<app-header></app-header>
+<div>
+    <!-- <input type="text" (input)="onChangeColor($event)" value="{{ color }}" />
+    <div
+        class="color-picker"
+        [ngStyle]="{ 'background-color': '#' + color }"
+    ></div> -->
+    <input type="text" [(ngModel)]="username" />
+    <p *ngIf="status">
+        {{ username }}
+    </p>
+    <button
+        class="btn btn-primary"
+        (click)="status = !status"
+    >
+        reset
+    </button>
+</div>
+<app-sidebar></app-sidebar>
+<app-footer></app-footer>

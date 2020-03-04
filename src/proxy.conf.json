@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://namconchuot.zendesk.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

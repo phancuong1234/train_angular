@@ -1,0 +1,88 @@
+<div class="container">
+    <div>
+        <h3>
+            danh sách FAQ
+        </h3>
+        <ul>
+            <li
+                *ngFor="let list of listFAQ"
+                style="display: flex;justify-content: space-between; margin-bottom: 5px;"
+            >
+                <a href="">{{ list.title }}</a>
+                <button class="btn btn-danger" (click)="onDelArticle(list.id)">
+                    Xóa
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Tạo mới FAQ</h3>
+        <form #articleForm="ngForm" (ngSubmit)="onAddArticle(articleForm)">
+            <div class="form-group">
+                <label for="section_faq">Chọn Nhóm</label>
+                <select
+                    class="form-control"
+                    name="section_faq"
+                    id="section_faq"
+                    ngModel
+                >
+                    <option
+                        *ngFor="let item of listSection; let i = index"
+                        [value]="item.id"
+                        [attr.selected]="i == 0 ? true : null"
+                    >
+                        {{ item.name }}</option
+                    >
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="permission_group_faq">Nhóm người edit</label>
+                <select
+                    class="form-control"
+                    name="permission_group_faq"
+                    id="permission_group_faq"
+                    ngModel
+                >
+                    <option
+                        *ngFor="let item of listPermission; let i = index"
+                        [value]="item.id"
+                        [attr.selected]="i == 0 ? true : null"
+                    >
+                        {{ item.name }}</option
+                    >
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="title_faq">tiêu đề</label><br />
+                <input
+                    type="text"
+                    class="form-control"
+                    name="title_faq"
+                    id="title_faq"
+                    ngModel
+                />
+            </div>
+            <div class="form-group">
+                <label for="content_faq">nội dung</label><br />
+                <textarea
+                    name="content_faq"
+                    id="content_faq"
+                    cols="30"
+                    rows="4"
+                    class="form-control"
+                    ngModel
+                    #name
+                ></textarea>
+            </div>
+            <p>{{ content_faq }}</p>
+            <button
+                class="btn btn-primary"
+                [disabled]="!articleForm.valid"
+                type="submit"
+            >
+                Thêm mới
+            </button>
+        </form>
+    </div>
+</div>

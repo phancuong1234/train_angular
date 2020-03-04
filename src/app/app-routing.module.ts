@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+// import { ExcerciseComponent } from "./excercise/excercise.component";
+import {ApiFAQComponent} from "./api-faq/api-faq.component";
 
-
-const routes: Routes = [];
+const routes: Routes = [{ path: "", component: ApiFAQComponent }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
