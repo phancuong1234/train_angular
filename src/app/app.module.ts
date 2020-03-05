@@ -11,6 +11,7 @@ import { SidebarComponent } from "./sidebar/sidebar.component";
 import { ApiFAQComponent } from "./api-faq/api-faq.component";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { InterceptorService } from "./services/http.interceptor";
+import { RingComponent } from './ring/ring.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { InterceptorService } from "./services/http.interceptor";
         FooterComponent,
         HeaderComponent,
         SidebarComponent,
-        ApiFAQComponent
+        ApiFAQComponent,
+        RingComponent
     ],
     imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
     providers: [

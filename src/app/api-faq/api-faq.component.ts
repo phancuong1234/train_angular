@@ -13,9 +13,8 @@ export class ApiFAQComponent implements OnInit {
     listSection: any;
     listPermission: any;
     sub: any;
-    a = 1;
     constructor(private apiFaq: ApiFAQService) {}
-
+    section_faq: any;
     ngOnInit() {
         this.getListFAQ();
         this.getListSection();
@@ -45,6 +44,7 @@ export class ApiFAQComponent implements OnInit {
     getListSection() {
         this.apiFaq.getListSection().subscribe(data => {
             this.listSection = data.value.sections;
+            this.section_faq = this.listSection[0]['id'];
         });
     }
     getPermissionGroup() {

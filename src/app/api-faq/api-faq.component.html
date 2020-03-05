@@ -25,12 +25,11 @@
                     class="form-control"
                     name="section_faq"
                     id="section_faq"
-                    ngModel
+                    [(ngModel)]="section_faq"
                 >
                     <option
-                        *ngFor="let item of listSection; let i = index"
+                        *ngFor="let item of listSection"
                         [value]="item.id"
-                        [attr.selected]="i == 0 ? true : null"
                     >
                         {{ item.name }}</option
                     >

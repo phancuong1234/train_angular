@@ -1,0 +1,19 @@
+.container {
+    &-ring {
+        position: relative;
+        // background-image: url("../../assets/gmo_ring.jpg");
+        // background-repeat: no-repeat;
+        // background-size: auto;
+        // background-position: center;
+        img {
+            width: 100%;
+        }
+        .bell {
+            position: absolute;
+        //      background-image: url("../../assets/bell.png");
+        // background-repeat: no-repeat;
+        // background-size: auto;
+        // background-position: center;
+        }
+    }
+}

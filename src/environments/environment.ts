@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    root: "https://namconchuot.zendesk.com/"
+    root: "https://cors-anywhere.herokuapp.com/https://namconchuot.zendesk.com/"
 };
 
 /*
